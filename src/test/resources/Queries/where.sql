@@ -25,3 +25,14 @@ where SALARY<= 6000;
 select EMAIL from EMPLOYEES
 where SALARY<= 6000;
 
+-- get me first name and salary information from employees who is making salary more than 6000 and department id =80
+select first_name,SALARY from EMPLOYEES
+where SALARY>6000 and DEPARTMENT_ID=80;
+
+-- get me first name and salary information from employees who is making salary more than and equal 3000 and less than or equal 6000
+select FIRST_NAME,SALARY from EMPLOYEES
+where SALARY>=3000 and SALARY<=6000;
+
+--BETWEEN lower AND upper logic  --> boundaries are included it will give all matching result in range
+select FIRST_NAME,SALARY from EMPLOYEES
+where SALARY between 3000 and 6000;
