@@ -33,6 +33,34 @@ where SALARY>6000 and DEPARTMENT_ID=80;
 select FIRST_NAME,SALARY from EMPLOYEES
 where SALARY>=3000 and SALARY<=6000;
 
---BETWEEN lower AND upper logic  --> boundaries are included it will give all matching result in range
+--BETWEEN lower AND upper logic--> uses and logic  --> boundaries are included it will give all matching result in range
 select FIRST_NAME,SALARY from EMPLOYEES
 where SALARY between 3000 and 6000;
+
+--get all information from employees who is working as IT programmer and SA_REP
+select * from EMPLOYEES
+where JOB_ID='IT_PROG' or JOB_ID='SA_REP';
+
+--IN CLAUSES--> uses or logic
+--get all information from employees who is working as IT programmer and SA_REP
+select * from EMPLOYEES
+where JOB_ID IN ('IT_PROG','SA_REP','FI_MGR');
+
+--get all information from employees who is not working as IT programmer and SA_REP
+select * from EMPLOYEES
+where JOB_ID NOT IN ('IT_PROG','SA_REP','FI_MGR');
+
+--ger me all info where locations table where city is Rome,Tokyo
+select * from LOCATIONS
+where CITY IN ('Rome','Tokyo');
+
+--get me all info from employees where id is equal 113,145,124,122
+select * from EMPLOYEES
+where EMPLOYEE_ID in(113,145,124,122);
+
+--NULL and NOT NULL
+select * from EMPLOYEES
+where DEPARTMENT_ID is null;
+
+select * from EMPLOYEES
+where DEPARTMENT_ID is not null;
