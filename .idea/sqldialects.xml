@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SqlDialectMappings">
-    <file url="file://$PROJECT_DIR$/src/test/resources/Queries/distinct.sql" dialect="GenericSQL" />
-    <file url="file://$PROJECT_DIR$/src/test/resources/Queries/select.sql" dialect="GenericSQL" />
-    <file url="file://$PROJECT_DIR$/src/test/resources/Queries/where.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/test/resources/Queries/day01/distinct.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/test/resources/Queries/day01/select.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/test/resources/Queries/day01/where.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/test/resources/Queries/day02/review.sql" dialect="GenericSQL" />
   </component>
 </project>
