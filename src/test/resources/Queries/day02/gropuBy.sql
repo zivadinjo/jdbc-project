@@ -47,4 +47,5 @@ order by REGION_ID; -- order them by region id
 select MANAGER_ID,count(*) from EMPLOYEES
 where MANAGER_ID is not null -- ignore null values
 group by MANAGER_ID
-having count(*)>5; -- giving result where count number is bigger than 5,manager having more than 5 employees
+having count(*)>5 -- giving result where count number is bigger than 5,manager having more than 5 employees
+order by 2 asc  ;
