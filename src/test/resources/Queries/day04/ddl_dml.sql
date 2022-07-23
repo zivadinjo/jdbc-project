@@ -115,3 +115,6 @@ DROP TABLE AGILETEAM;
    --DROP will delete table it self including data
 
 commit ; -- to save all changes to table
+
+--view--> does not exist in data base with data. It is just virtual table to reuse query
+--Table-->  exist in database with their data
