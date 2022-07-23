@@ -74,3 +74,44 @@ DELETE from scrumteam
 where firstname='Dembe';
 
 commit ;
+
+/*
+
+ ALTER
+ we will use this key word to update table structure
+
+ */
+
+ --ADD NEW COLUMN
+ALTER TABLE scrumteam
+ADD gender varchar(20);
+
+--Update all scrumteam gender as Male
+UPDATE scrumteam
+SET GENDER='Male';
+
+--RENAME COLUMN
+ALTER TABLE scrumteam
+rename COLUMN SALARY to annual_salary;
+
+--DROP COLUMN--> Delete from table
+ALTER TABLE scrumteam
+DROP COLUMN gender;
+
+--RENAME TABLE
+ALTER TABLE scrumteam
+RENAME TO AGILETEAM;
+
+select * from AGILETEAM;--> scrumteam changed to agileteam
+
+--TRUNCATE
+TRUNCATE TABLE AGILETEAM;
+
+--DROP
+DROP TABLE AGILETEAM;
+
+--IQ--  WHAT IS THE DIFFERENCE BETWEEN DROP AND TRUNCATE
+   --TRUNCATE will delete all table content/data but not table
+   --DROP will delete table it self including data
+
+commit ;
