@@ -114,4 +114,4 @@ DROP TABLE AGILETEAM;
    --TRUNCATE will delete all table content/data but not table
    --DROP will delete table it self including data
 
-commit ;
+commit ; -- to save all changes to table
