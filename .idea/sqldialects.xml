@@ -18,5 +18,6 @@
     <file url="file://$PROJECT_DIR$/src/test/resources/Queries/day04/joins.sql" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/src/test/resources/Queries/day04/review.sql" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/src/test/resources/Queries/day04/views.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/test/resources/Queries/day05/joinExercises.sql" dialect="GenericSQL" />
   </component>
 </project>
