@@ -53,7 +53,16 @@ public class P02_FlexibleNavigation {
         System.out.println("===========PREVIOUS============");
         rs.previous();
         System.out.println(rs.getString(1)+" "+rs.getString(2));
-        System.out.println(rs.getRow());
+        System.out.println(rs.getRow());//9
+
+        System.out.println("=======PRINT ALL TABLE DYNAMICALLY");
+
+        //in the position to get first row
+        rs.beforeFirst();
+        //getting table dynamically
+        while (rs.next()){
+        System.out.println(rs.getRow()+"-"+rs.getString(1)+" "+rs.getString(2));
+        }
 
 
 
