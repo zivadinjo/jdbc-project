@@ -49,6 +49,9 @@ public class P02_DBUtilPractice {
             System.out.println(eachRowMap);
         }
 
+        System.out.println(DB_Util.getFirstRowFirstColumn());
+        System.out.println(DB_Util.getCellValue(1, 1));
+
         //close conn
         DB_Util.destroy();
 
