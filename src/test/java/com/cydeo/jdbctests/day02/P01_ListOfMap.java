@@ -115,4 +115,50 @@ public class P01_ListOfMap {
         conn.close();
     }
 
+    @Test
+    public void task3() throws SQLException{
+        // DriverManager class getConneciton is used for to make connection with database
+        Connection conn = DriverManager.getConnection(dbUrl, dbUsername, dbPassword);
+
+        // Statemet helps us to execute Query
+        Statement statement = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
+
+        // ResutSet stores data that we get from after query execution
+        // rs is just a variable/object name// table data
+        ResultSet rs = statement.executeQuery("select first_name,last_name,salary from employees where rownum<6" );
+        ResultSetMetaData rsmd = rs.getMetaData();//column reader
+
+
+        List<Map<String,Object>> dataList = new ArrayList<>();
+
+        //iterate trough each row dynamically
+        while (rs.next()){
+
+            Map<String,Object> rowMap = new HashMap<>(); //creating new map
+
+            //fill the map dynamically all row,all columns,it doesn't matter of the number of it
+            for (int i = 1; i <= rsmd.getColumnCount(); i++) {
+
+                rowMap.put(rsmd.getColumnName(i),rs.getString(i));
+
+            }
+
+            dataList.add(rowMap);// add this ready map in to list
+
+            System.out.println(rowMap);
+
+        }
+
+
+
+
+
+
+        //close conn
+        rs.close();
+        statement.close();
+        conn.close();
+    }
+
+
 }
