@@ -34,4 +34,24 @@ public class P02_DBUtilPractice {
 
     }
 
+
+    @Test
+    public void task2(){
+
+        // create a connection
+        DB_Util.createConnection();
+
+        //run query
+        DB_Util.runQuery("select count(*) from employees");
+        List<Map<String, String>> allRowAsListOfMap = DB_Util.getAllRowAsListOfMap();
+
+        for (Map<String,String> eachRowMap : allRowAsListOfMap){
+            System.out.println(eachRowMap);
+        }
+
+        //close conn
+        DB_Util.destroy();
+
+    }
+
 }
